@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@types/firebase": "^2.4.32",
+    "@types/react-router-dom": "^5.3.3",
+    "firebase": "^12.11.0",
+    "react-router-dom": "^7.14.0",
+    "vite": "^8.0.3"
+  }
+}
