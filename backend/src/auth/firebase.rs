@@ -14,6 +14,7 @@ use jsonwebtoken::{decode, DecodingKey, Validation, Algorithm};
 // configurable via `FIREBASE_CERTS_URL` to allow deterministic testing.
 
 #[derive(Deserialize)]
+#[allow(dead_code)]
 struct Claims {
     aud: String,
     iss: String,

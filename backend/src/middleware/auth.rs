@@ -2,7 +2,6 @@ use actix_web::HttpRequest;
 use crate::error::FaultReportError;
 use uuid::Uuid;
 use sha2::{Sha256, Digest};
-use std::env;
 use crate::auth::firebase;
 
 /// Verify Firebase auth token.

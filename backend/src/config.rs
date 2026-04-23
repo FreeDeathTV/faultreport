@@ -2,7 +2,6 @@ use anyhow::{Context, Result};
 use dotenv::dotenv;
 use std::env;
 use std::collections::HashSet;
-use std::path::PathBuf;
 
 #[derive(Clone)]
 pub struct Config {

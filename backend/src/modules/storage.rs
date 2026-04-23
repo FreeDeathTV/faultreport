@@ -1,11 +1,10 @@
 use anyhow::Result;
-use sqlx::{PgPool, Row, Acquire, Transaction, Postgres, Executor};
+use sqlx::{PgPool, Row};
 use uuid::Uuid;
 use serde_json;
 use chrono::Utc;
 use crate::modules::error_capture::NormalizedError;
 use serde::Serialize;
-use tracing::error;
 use chrono::Timelike;
 
 pub async fn persist(pool: &PgPool, project_id: Uuid, error: NormalizedError) -> Result<(Uuid, bool, i64)> {

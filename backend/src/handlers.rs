@@ -151,7 +151,7 @@ pub async fn list_errors(
 
 pub async fn create_project(
     pool: web::Data<PgPool>,
-    cache: web::Data<ApiKeyCache>,
+    _cache: web::Data<ApiKeyCache>,
     req: HttpRequest,
     req_body: web::Json<CreateProjectRequest>,
 ) -> Result<HttpResponse, FaultReportError> {

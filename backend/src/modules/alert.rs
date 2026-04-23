@@ -37,7 +37,7 @@ pub async fn record_alert(pool: &PgPool, project_id: Uuid, error_hash: &str) -> 
     Ok(())
 }
 
-pub async fn post_slack(pool: &PgPool, project_id: Uuid, error_hash: &str) -> Result<()> {
+pub async fn post_slack(_pool: &PgPool, project_id: Uuid, error_hash: &str) -> Result<()> {
     // If CI or runtime disables external calls, skip posting.
     if let Ok(flag) = env::var("NO_EXTERNAL_CALLS") {
         let f = flag.to_ascii_lowercase();
